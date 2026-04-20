@@ -1,0 +1,32 @@
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  font-family: sans-serif;
+}
+
+.title {
+  text-align: center;
+  color: #6a1b9a;
+}
+
+.section {
+  margin-top: 2rem;
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.section h2 {
+  margin-bottom: 0.5rem;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 1rem;
+  background: #6a1b9a;
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+}
