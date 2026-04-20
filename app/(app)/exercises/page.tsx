@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 
-const muscles = ["biceps", "chest", "back", "legs"];
+const muscles = ["biceps", "chest", "back", "legs","shoulders","abs"];
 
 export default function ExercisesPage() {
   return (

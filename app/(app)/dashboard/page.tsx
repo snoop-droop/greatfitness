@@ -12,10 +12,10 @@ export default function Dashboard() {
           gap: "20px",
         }}
       >
-        <Card title="🔥 Calories Burned" value="2200 kcal" />
-        <Card title="🏋️ Workouts" value="5 this week" />
-        <Card title="⚖️ Weight" value="85 kg" />
-        <Card title="💪 Protein Intake" value="120g" />
+        <Card title=" Calories Burned" value="2200 kcal" />
+        <Card title=" Workouts" value="5 this week" />
+        <Card title=" Weight" value="85 kg" />
+        <Card title=" Protein Intake" value="120g" />
       </div>
     </div>
   );

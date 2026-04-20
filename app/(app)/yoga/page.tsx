@@ -49,7 +49,7 @@ export default function YogaTrainer() {
 
   return (
     <main className={styles.container}>
-      <h1 className={styles.title}>🧘 AI YOGA TRAINER</h1>
+      <h1 className={styles.title}> AI YOGA TRAINER</h1>
 
       {/* Chat Window */}
       <div className={styles.chatWindow}>

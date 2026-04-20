@@ -31,7 +31,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           padding: "0 20px",
           borderBottom: "1px solid #1e293b"
         }}>
-          <h3>Welcome Back 💪</h3>
+          <h3>Welcome Back </h3>
 
           <LogoutButton />
         </header>

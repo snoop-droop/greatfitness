@@ -13,7 +13,7 @@ export default function Home() {
       gap: "20px"
     }}>
       <h1 style={{ fontSize: "40px", fontWeight: "bold", color: "#22d3ee" }}>
-        GREATFITNESS 💪
+        GREAT-FITNESS WEBSITE 
       </h1>
 
       <p style={{ color: "#94a3b8", maxWidth: "500px", textAlign: "center" }}>

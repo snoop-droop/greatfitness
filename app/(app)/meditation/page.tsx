@@ -49,7 +49,7 @@ export default function MeditationTrainer() {
 
   return (
     <main className={styles.container}>
-      <h1 className={styles.title}>🧘 AI MEDITATION GUIDE</h1>
+      <h1 className={styles.title}> AI MEDITATION GUIDE</h1>
 
       {/* Chat Window */}
       <div className={styles.chatWindow}>

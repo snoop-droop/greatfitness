@@ -35,7 +35,9 @@ export default function Sidebar() {
         <Link href="/dashboard" style={link(path === "/dashboard")}>
           Dashboard
         </Link>
-
+<Link href="/meditation" style={link(path === "/meditation")}>
+          Meditation
+        </Link>
         <Link href="/exercises" style={link(path === "/exercises")}>
           Exercises
         </Link>
