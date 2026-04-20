@@ -6,47 +6,59 @@ import { usePathname } from "next/navigation";
 export default function Sidebar() {
   const path = usePathname();
 
-  const navItems = [
-    { name: "Overview", href: "/dashboard" },
-    { name: "AI Trainer", href: "/trainer" },
-    { name: "Yoga", href: "/yoga" },
-    { name: "Meditation", href: "/meditation" },
-    { name: "Exercises", href: "/exercises" },
-    { name: "Nutrition", href: "/calories" },
-  ];
+  function active(route: string) {
+    return path === route ? { color: "#22d3ee" } : {};
+  }
 
   return (
     <aside
       style={{
-        width: "240px",
+        width: "220px",
         background: "#020617",
-        borderRight: "1px solid #1e293b",
         padding: "20px",
+        borderRight: "1px solid #1e293b",
+        minHeight: "100vh",
       }}
     >
       {/* LOGO */}
-      <h2 style={{ color: "#22d3ee", marginBottom: "30px" }}>
-        GREATFITNESS
-      </h2>
+      <Link href="/dashboard" style={{ textDecoration: "none" }}>
+        <h2 style={{ color: "#22d3ee", cursor: "pointer" }}>
+          GREATFITNESS
+        </h2>
+      </Link>
 
       {/* NAV */}
-      <nav style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-        {navItems.map((item) => (
-          <Link
-            key={item.name}
-            href={item.href}
-            style={{
-              padding: "10px 14px",
-              borderRadius: "10px",
-              textDecoration: "none",
-              color: path === item.href ? "#22d3ee" : "#cbd5f5",
-              background: path === item.href ? "#0f172a" : "transparent",
-              transition: "0.2s",
-            }}
-          >
-            {item.name}
-          </Link>
-        ))}
+      <nav
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "15px",
+          marginTop: "20px",
+        }}
+      >
+        <Link href="/dashboard" style={active("/dashboard")}>
+          Dashboard
+        </Link>
+
+        <Link href="/trainer" style={active("/trainer")}>
+          AI Trainer
+        </Link>
+
+        <Link href="/yoga" style={active("/yoga")}>
+          Yoga
+        </Link>
+
+        <Link href="/meditation" style={active("/meditation")}>
+          Meditation
+        </Link>
+
+        <Link href="/calories" style={active("/calories")}>
+          Calories
+        </Link>
+
+        <Link href="/exercises" style={active("/exercises")}>
+          Exercises
+        </Link>
       </nav>
     </aside>
   );
