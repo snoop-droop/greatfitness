@@ -11,6 +11,14 @@ export default function AppLayout({
 }) {
   return (
     <div className={styles.app}>
+      <div
+  style={{
+    display: "flex",
+    minHeight: "100vh",
+    background: "#020617",
+    color: "#e2e8f0",
+  }}
+></div>
       <Sidebar />
 
       <main className={styles.main}>
