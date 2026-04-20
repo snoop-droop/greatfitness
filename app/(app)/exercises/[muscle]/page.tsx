@@ -1,39 +1,50 @@
-export default function ExercisePage({
+import { exercises } from "../data";
+
+export default async function MusclePage({
   params,
 }: {
-  params: { muscle?: string };
+  params: Promise<{ muscle: string }>;
 }) {
-  // ✅ SAFE ACCESS
-  const muscle = params?.muscle?.toLowerCase();
+  const { muscle } = await params;
 
-  if (!muscle) {
-    return <h1>No muscle selected</h1>;
-  }
+  const cleanMuscle = muscle.toLowerCase();
 
-  const exercises: Record<string, string[]> = {
-    biceps: ["Bicep Curls", "Hammer Curls", "Preacher Curls"],
-    chest: ["Push Ups", "Bench Press", "Chest Fly"],
-    back: ["Pull Ups", "Deadlift", "Rows"],
-    legs: ["Squats", "Lunges", "Leg Press"],
-    shoulders: ["Shoulder Press", "Lateral Raises"],
-    abs: ["Crunches", "Plank"],
-  };
+  console.log("muscle:", cleanMuscle);
 
-  const list = exercises[muscle];
+  const list = exercises[cleanMuscle as keyof typeof exercises];
+
+  console.log("list:", list);
 
   if (!list) {
-    return <h1>No exercises found</h1>;
+    return (
+      <div>
+        <h2>❌ No exercises found for {cleanMuscle}</h2>
+      </div>
+    );
   }
 
   return (
-    <div style={{ padding: "20px" }}>
-      <h1>{muscle.toUpperCase()} EXERCISES</h1>
+    <div>
+      <h1 style={{ fontSize: "26px", marginBottom: "20px" }}>
+        {cleanMuscle.toUpperCase()} Exercises
+      </h1>
 
-      <ul>
+      <div style={{ display: "grid", gap: "12px" }}>
         {list.map((ex, i) => (
-          <li key={i}>{ex}</li>
+          <div
+            key={i}
+            style={{
+              padding: "14px",
+              background: "#111a2e",
+              border: "1px solid #1f2a44",
+              borderRadius: "12px",
+              color: "#e2e8f0",
+            }}
+          >
+            💪 {ex}
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }

@@ -1,30 +1,6 @@
 export const exercises = {
-  biceps: [
-    "Barbell Curl",
-    "Dumbbell Curl",
-    "Hammer Curl",
-    "Preacher Curl",
-    "Cable Curl",
-  ],
-  chest: [
-    "Bench Press",
-    "Incline Dumbbell Press",
-    "Push Ups",
-    "Chest Fly",
-    "Cable Crossover",
-  ],
-  back: [
-    "Pull Ups",
-    "Lat Pulldown",
-    "Barbell Row",
-    "Seated Row",
-    "Deadlift",
-  ],
-  legs: [
-    "Squats",
-    "Lunges",
-    "Leg Press",
-    "Leg Curl",
-    "Calf Raises",
-  ],
+  biceps: ["Barbell Curl", "Dumbbell Curl", "Hammer Curl"],
+  chest: ["Bench Press", "Push Ups", "Incline Press"],
+  back: ["Pull Ups", "Barbell Row", "Lat Pulldown"],
+  legs: ["Squats", "Lunges", "Leg Press"],
 };
