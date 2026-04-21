@@ -8,20 +8,36 @@ export default function Login() {
   const [error, setError] = useState("");
 
   async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
+  e.preventDefault();
 
-    const res = await fetch("/api/login", {
+  setError("");
+
+  try {
+    const res = await fetch("http://127.0.0.1/greatfitness-api/login.php", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email,
+        password,
+      }),
     });
 
-    if (res.ok) {
+    const data = await res.json();
+
+    console.log("API RESPONSE:", data); // IMPORTANT
+
+    if (data.success) {
       window.location.href = "/dashboard";
     } else {
-      setError("Invalid email or password");
+      setError(data.error || "Invalid email or password");
     }
+  } catch (err) {
+    console.error(err);
+    setError("Cannot connect to server");
   }
+}
 
   return (
     <main
