@@ -1,57 +1,95 @@
 "use client";
 
+import Sidebar from "@/app/components/Sidebar";
 import { useRouter } from "next/navigation";
 
 export default function HomePage() {
   const router = useRouter();
 
   return (
-    <div style={container}>
+    <div style={appLayout}>
       
-      {/* HERO */}
-      <section style={hero}>
-        <h1 style={title}>GREATFITNESS</h1>
-        <p style={subtitle}>
-          Build muscle. Lose fat. Stay consistent.
-        </p>
+      {/* SIDEBAR */}
+      <Sidebar />
 
-        <div style={buttons}>
-          <button style={primaryBtn} onClick={() => router.push("/dashboard")}>
-            Go to Dashboard
-          </button>
+      {/* MAIN CONTENT */}
+      <main style={main}>
+        
+        {/* NAVBAR */}
+        <header style={navbar}>
+          <h3>Welcome to GREATFITNESS </h3>
+        </header>
 
-          <button style={secondaryBtn} onClick={() => router.push("/login")}>
-            Login
-          </button>
+        {/* PAGE CONTENT */}
+        <div style={content}>
+          
+          <section style={hero}>
+            <h1 style={title}>GREATFITNESS</h1>
+            <p style={subtitle}>
+              Build muscle. Lose fat. Stay consistent.
+            </p>
+
+            <div style={buttons}>
+              <button
+                style={primaryBtn}
+                onClick={() => router.push("/dashboard")}
+              >
+                Go to Dashboard
+              </button>
+
+              <button
+                style={secondaryBtn}
+                onClick={() => router.push("/login")}
+              >
+                Login
+              </button>
+            </div>
+          </section>
+
+          {/* FEATURES */}
+          <section style={features}>
+            <div style={card}>
+              <h3> Workouts</h3>
+              <p>Explore exercises by muscle group</p>
+            </div>
+
+            <div style={card}>
+              <h3> Calories</h3>
+              <p>Track your nutrition and goals</p>
+            </div>
+
+            <div style={card}>
+              <h3>📈 Progress</h3>
+              <p>Stay consistent and improve</p>
+            </div>
+          </section>
+
         </div>
-      </section>
 
-      {/* FEATURES */}
-      <section style={features}>
-        <div style={card}>
-          <h3>🏋️ Workouts</h3>
-          <p>Track and explore exercises by muscle group</p>
-        </div>
-
-        <div style={card}>
-          <h3>🔥 Calories</h3>
-          <p>Monitor your daily intake and goals</p>
-        </div>
-
-        <div style={card}>
-          <h3>📈 Progress</h3>
-          <p>Stay consistent and track improvements</p>
-        </div>
-      </section>
-
+      </main>
     </div>
   );
 }
 
-const container = {
+const appLayout = {
+  display: "flex",
   minHeight: "100vh",
   background: "#0b1220",
   color: "#e5e7eb",
+};
+
+const main = {
+  flex: 1,
+  display: "flex",
+  flexDirection: "column" as const,
+};
+
+const navbar = {
+  padding: "15px 25px",
+  borderBottom: "1px solid #1f2a44",
+};
+
+const content = {
   padding: "40px",
 };
 

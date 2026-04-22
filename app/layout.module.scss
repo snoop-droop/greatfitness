@@ -66,12 +66,12 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;   // 👈 centers everything horizontally
+  align-items: center;   //  centers everything horizontally
 }
 
 .content {
   width: 100%;
   display: flex;
-  justify-content: center;  // 👈 centers child pages
+  justify-content: center;  // centers child pages
   padding: 20px;
 }

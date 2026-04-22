@@ -35,7 +35,7 @@ export default function NutritionCalculator() {
 
   return (
     <main className={styles.container}>
-      <h1 className={styles.title}>🥗 Nutrition Calculator</h1>
+      <h1 className={styles.title}> Nutrition Calculator</h1>
 
       {/* FORM CARD */}
       <div className={styles.chatWindow}>
@@ -65,7 +65,6 @@ export default function NutritionCalculator() {
         </div>
       </div>
 
-      {/* RESULT */}
       {result && (
         <div className={styles.chatWindow}>
           <p><strong>Calories:</strong> {result.calories} kcal/day</p>

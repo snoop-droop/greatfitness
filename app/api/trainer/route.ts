@@ -4,7 +4,7 @@ export async function POST(req: Request) {
 
     let prompt = "";
 
-    // 🧠 Optimized prompts for SMALL models like phi3
+    //  Optimized prompts for SMALL models like phi3
     if (mode === "workout") {
       prompt = `
 You are a professional fitness trainer.

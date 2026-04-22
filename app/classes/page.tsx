@@ -6,17 +6,17 @@ export default function Programs() {
       <div style={{ display: "flex", gap: "20px", marginTop: "20px" }}>
         
         <div style={card}>
-          <h3>💪 Strength Program</h3>
+          <h3> Strength Program</h3>
           <p>Build muscle and increase power</p>
         </div>
 
         <div style={card}>
-          <h3>🔥 Fat Loss Program</h3>
+          <h3> Fat Loss Program</h3>
           <p>Burn calories and lose weight</p>
         </div>
 
         <div style={card}>
-          <h3>🧘 Flexibility Program</h3>
+          <h3> Flexibility Program</h3>
           <p>Improve mobility and recovery</p>
         </div>
 

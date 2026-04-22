@@ -25,15 +25,16 @@ export default function Sidebar() {
         borderRight: "1px solid #1f2a44",
       }}
     >
-      <Link href="/">
-        <h2 style={{ color: "#22d3ee", marginBottom: "30px" }}>
-          GREATFITNESS
-        </h2>
-      </Link>
+      <Link href="/" style={{ textDecoration: "none", color: "#22d3ee", fontWeight: "bold" }}>
+  GREATFITNESS
+</Link>
 
       <nav>
         <Link href="/dashboard" style={link(path === "/dashboard")}>
-          Dashboard
+          login
+        </Link>
+        <Link href="/trainer" style={link(path === "/trainer")}>
+          AI Trainer
         </Link>
 <Link href="/meditation" style={link(path === "/meditation")}>
           Meditation
@@ -42,9 +43,7 @@ export default function Sidebar() {
           Exercises
         </Link>
 
-        <Link href="/trainer" style={link(path === "/trainer")}>
-          AI Trainer
-        </Link>
+        
 
         <Link href="/yoga" style={link(path === "/yoga")}>
           Yoga
@@ -52,6 +51,9 @@ export default function Sidebar() {
 
         <Link href="/calories" style={link(path === "/calories")}>
           Calories
+        </Link>
+        <Link href="/about" style={link(path === "/about")}>
+          about
         </Link>
       </nav>
     </aside>

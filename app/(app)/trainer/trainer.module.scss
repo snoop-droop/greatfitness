@@ -1,7 +1,7 @@
 .container {
   width: 100%;
-  max-width: 750px;   // 👈 perfect centered width
-  margin: 0 auto;     // 👈 center
+  max-width: 750px;   
+  margin: 0 auto;     
   display: flex;
   flex-direction: column;
 }
@@ -88,8 +88,8 @@
   color: white;
 }
 .container {
-  max-width: 800px;   // 👈 KEY FIX
-  margin: 0 auto;     // 👈 centers horizontally
+  max-width: 800px;   
+  margin: 0 auto;     
   width: 100%;
   padding: 20px;
 }
